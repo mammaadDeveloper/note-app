@@ -1,16 +1,20 @@
-import { StrictMode } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 import * as ReactDOM from 'react-dom/client';
-import App from './app/app';
+import './styles.css';
+import { createBrowserRouter } from 'react-router-dom';
+import { Root } from './pages/root';
+import { Error } from './pages/error';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 
-root.render(
-  <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>,
-);
+const routes = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    errorElement: <Error/>
+  },
+]);
+
+root.render(<RouterProvider router={routes} />);
