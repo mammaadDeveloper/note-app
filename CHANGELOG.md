@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/mammaadDeveloper/note-app/compare/v1.0.0...v1.1.0) (2026-07-21)
+
+
+### Features
+
+* **web:** clear web app and install tailwindcss and daisyui ([b7520f5](https://github.com/mammaadDeveloper/note-app/commit/b7520f509e6f363414deae6d3f09d7e0280543bb))
+* **web:** frontend preparation ([5e6834a](https://github.com/mammaadDeveloper/note-app/commit/5e6834a178168a45036a1213f081e972245737ab))
+* **web:** install react hook form and zod ([660f232](https://github.com/mammaadDeveloper/note-app/commit/660f23203e989e7fa5fd9cf4a7a98e17f60c1186))
+* **web:** install web app ([fa9930f](https://github.com/mammaadDeveloper/note-app/commit/fa9930fc3fad61a680a72442ffba8559c562fc6c))
+
+
+### Bug Fixes
+
+* **web:** resolving Dev server issue when VPN is active ([7188c3d](https://github.com/mammaadDeveloper/note-app/commit/7188c3d44cd284378cf114f3d9317fdb1f96bb7d))
+
 ## 1.0.0 (2026-07-18)
 
 
