@@ -8,11 +8,11 @@ export default defineConfig(() => ({
   cacheDir: '../../node_modules/.vite/apps/web',
   server: {
     port: 4200,
-    host: 'localhost',
+    host: true,
   },
   preview: {
     port: 4200,
-    host: 'localhost',
+    host: '0.0.0.0',
   },
   plugins: [react(), tailwindcss()],
   // Uncomment this if you are using workers.
