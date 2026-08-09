@@ -4,3 +4,25 @@
 body{
   @apply bg-base-content;
 }
+
+.fade-in-out {
+  animation: fade-in-out 3s ease-in-out forwards;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+
+  16.66% {
+    opacity: 1;
+  }
+
+  83.33% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
