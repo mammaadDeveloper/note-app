@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Patch, Post, Query } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 import { PaginationDto } from './dto/pagination.dto';
 import { NoteEntity } from './entities/note.entity';
@@ -21,7 +21,7 @@ export class AppController {
   @Get(':id')
   @HttpCode(HttpStatus.OK)
   @ApiResponse({status: 200, description: 'Successfully retrived note by id.'})
-  async findOne(@Query('id') id: number): Promise<NoteEntity | null> {
+  async findOne(@Param('id') id: number): Promise<NoteEntity | null> {
     return await this.appService.findOne(id);
   }
 
@@ -39,7 +39,7 @@ export class AppController {
     return await this.appService.update(id, note);
   }
 
-  @Get(':id')
+  @Delete(':id')
   @HttpCode(HttpStatus.NO_CONTENT)
   @ApiResponse({status: 204, description: 'Successfully deleted note.'})
   async delete(@Query('id') id: number): Promise<boolean> {

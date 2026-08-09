@@ -4,12 +4,15 @@ import { AppModule } from './app/app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import fs from 'fs';
+import { json } from 'body-parser';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api');
 
   app.enableCors();
+
+  app.use(json());
 
   app.useGlobalPipes(new ValidationPipe({
     transform: true,
