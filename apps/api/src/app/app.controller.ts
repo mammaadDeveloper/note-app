@@ -6,7 +6,7 @@ import { CreateNoteDto } from './dto/create.dto';
 import { UpdateNoteDto } from './dto/update.dto';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 
-@Controller()
+@Controller('notes')
 @ApiTags('notes')
 export class AppController {
   constructor(private readonly appService: AppService) { }
